@@ -8,7 +8,7 @@ test.describe('OrangeHRM Login UI Test', () => {
     await page.locator("xpath=//input[@name='username']").fill('Admin');
     await page.locator("xpath=//input[@name='password']").fill('admin123');
     await page.locator("xpath=//button[@type='submit']").click();
-    await expect(page.locator("xpath=//h6")).toHaveText('Dasfdfhboard');
+    await expect(page.locator("xpath=//h6")).toHaveText('Dashboard');
 
   });
 

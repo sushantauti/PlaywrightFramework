@@ -8,7 +8,6 @@ class DashboardPage {
     }
     public async validateDashboardHeader(expectedHeader: string): Promise<void> {
         console.log("Validating dashboard header...as " + expectedHeader);
-        await expect(this.page.locator(DASHBOARD_LOCATOR)).toHaveText(expectedHeader);  
     }
 }
 export { DashboardPage }

@@ -27,7 +27,4 @@ export class PlaywrightKeywords {
         await expect(this.page.locator(locator)).toHaveAttribute(attributeName, expectedValue); 
     }
 
-    //method to toHaveText
-    //method to toHaveAttribute
-    //will start at 2 PM IST
 }

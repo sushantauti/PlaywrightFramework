@@ -54,4 +54,5 @@ export class LoginPage extends PlaywrightKeywords {
         //await expect(this.page.locator(PASSWORD_LOCATOR)).toHaveAttribute("placeholder", expectedPasswordPlaceholder);
         await this.validateAttributeValue(PASSWORD_LOCATOR, "placeholder", expectedPasswordPlaceholder);
     }
+    
 }

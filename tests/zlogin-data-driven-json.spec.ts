@@ -7,14 +7,14 @@ import { JsonUtil } from '../utils/json-util.js';
 
 test.describe('OrangeHRM Login - Data Driven', () => {
     const validLoginData = JsonUtil.readJsonFile('validLoginData');
-    for (const { username, password, expectedText } of validLoginData) {
+    for (const { username, password, errorMessage } of validLoginData) {
     test(`Validate user is able to Login :${username} / ${password}`, async ({ page }) => {
         const loginPage = new LoginPage(page);
         await loginPage.fillUsername(username);
         await loginPage.fillPassword(password);
         await loginPage.clickOnLogin();
         const dashboardPage = new DashboardPage(page);
-        await dashboardPage.validateDashboardHeader(expectedText);
+        await dashboardPage.validateDashboardHeader(errorMessage);
     });
 };
 

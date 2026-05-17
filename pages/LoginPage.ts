@@ -37,11 +37,11 @@ class LoginPage {
         await expect(this.page.locator(LOGIN_HEADER)).toHaveText(expectedHeader);
     }
 
-    public async validateUsernamePlaceholder(expectedUsenamePlaceholder: string): Promise<void> {
-        await expect(this.page.locator(USERNAME_LOCATOR)).toHaveAttribute("placeholder", expectedUsenamePlaceholder);
+    public async validateUsernamePlaceholder(expectedUsernamePlaceholder: string): Promise<void> {
+        await expect(this.page.locator(USERNAME_LOCATOR)).toHaveAttribute("placeholder", expectedUsernamePlaceholder);
     }
 
-    public async validatePlaceholderPlaceholder(expectedPasswordPlaceholder: string): Promise<void> {
+    public async validatePasswordPlaceholder(expectedPasswordPlaceholder: string): Promise<void> {
         await expect(this.page.locator(PASSWORD_LOCATOR)).toHaveAttribute("placeholder", expectedPasswordPlaceholder);
     }
 }

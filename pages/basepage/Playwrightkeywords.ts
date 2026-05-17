@@ -15,7 +15,18 @@ export class PlaywrightKeywords {
         await this.page.locator(locator).click();
     }
 
-    //method to validate title 
+    public async validateTitle(expectedTitle: string): Promise<void> {
+        await expect(this.page).toHaveTitle(expectedTitle);
+    }
+
+        public async validateExactInnerText(locator: string, expectedText: string): Promise<void> {
+        await expect(this.page.locator(locator)).toHaveText(expectedText);
+    }
+
+    public async validateAttributeValue(locator: string, attributeName: string, expectedValue: string): Promise<void> {
+        await expect(this.page.locator(locator)).toHaveAttribute(attributeName, expectedValue); 
+    }
+
     //method to toHaveText
     //method to toHaveAttribute
     //will start at 2 PM IST

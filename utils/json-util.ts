@@ -1,6 +1,6 @@
 import fs from 'fs';
+import { jsonFilePath } from '../config.js';
 
-const jsonFilePath = 'test-data/data.json';
 export class JsonUtil {
     static readJsonFile(key?: string): any {
         const data = JSON.parse(fs.readFileSync(jsonFilePath, 'utf-8'));

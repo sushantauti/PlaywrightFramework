@@ -13,7 +13,7 @@
     ],
         "validLoginData": [
         {
-            "username": "Adminxc",
+            "username": "Admin",
             "password": "admin123", 
             "errorMessage": "Dashboard"
          }

@@ -1,6 +1,6 @@
 import { test, expect } from "../fixures/base-test.js"
 
-test.describe('OrangeHRM Login UI Test', () => {
+test.describe('OrangeHRM Login UI Test', async () => {
 
   test('Verify Login ', async ({ page }) => {
     await expect(page).toHaveTitle('OrangeHRM');
